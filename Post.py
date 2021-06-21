@@ -1,7 +1,9 @@
 import requests
 from requests.structures import CaseInsensitiveDict
 
-url = "https://api.eu.opsgenie.com/v1/json/freshdesk?apiKey=a650e10f-76d6-4c52-9bff-8a506e64cf9e"
+url = "https://api.eu.opsgenie.com/v1/json/freshdesk?apiKey=ae047cd1-485c-4932-9906-64e851b552a4" #Nový comment
+#"https://api.eu.opsgenie.com/v1/json/freshdesk?apiKey=a650e10f-76d6-4c52-9bff-8a506e64cf9e" #Nový ticket
+
 
 data = """
 {
@@ -23,7 +25,7 @@ data = """
         "ticket_priority": "Medium",
         "ticket_source": "Phone",
         "ticket_type": "Incident",
-        "ticket_requester_name": "halit okumus",
+        "requester_name": "halit okumus",
         "ticket_requester_firstname": "halit",
         "ticket_requester_lastname": "okumus",
         "ticket_requester_email": "halit@opsgenie.com",
