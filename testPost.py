@@ -1,8 +1,7 @@
 import requests
 from requests.structures import CaseInsensitiveDict
 
-url = "https://api.eu.opsgenie.com/v1/json/freshdesk?apiKey=ae047cd1-485c-4932-9906-64e851b552a4" #Nový comment
-#"https://api.eu.opsgenie.com/v1/json/freshdesk?apiKey=a650e10f-76d6-4c52-9bff-8a506e64cf9e" #Nový ticket
+url = "" # Vlož api
 
 
 data = """
