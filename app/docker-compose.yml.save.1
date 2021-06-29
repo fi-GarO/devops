@@ -1,14 +1,16 @@
 version: "3.8"
 
-services:
-  app:
+services: app:
     image: node:12-alpine
     command: sh -c "yarn install && yarn run dev"
     ports:
-      - "10.0.1.23:3000:3000"
+      - 3000:3000
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.2
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
@@ -19,9 +21,13 @@ services:
     image: mysql:5.7
     volumes:
       - todo-mysql-data:/var/lib/mysql
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.3
     environment: 
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: todos
 
 volumes:
   todo-mysql-data:
+          

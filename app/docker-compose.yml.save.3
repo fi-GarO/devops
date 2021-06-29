@@ -9,6 +9,8 @@ services:
     working_dir: /app
     volumes:
       - ./:/app
+    networks:
+      - mynet
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
@@ -19,9 +21,21 @@ services:
     image: mysql:5.7
     volumes:
       - todo-mysql-data:/var/lib/mysql
+    networks:
+      - mynet
     environment: 
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: todos
 
 volumes:
   todo-mysql-data:
+
+networks:
+  mynet:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.0.1.0/16
+         gateway: 10.0.1.23
+         aux_addresses:
+          my
