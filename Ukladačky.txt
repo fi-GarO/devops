@@ -1,0 +1,38 @@
+
+Zkontrolovat deploy a jestli vidíme všechny repozitáře (ukladačky níže)
+Všechny ukladačky vypsány v https://jablotroncloudservices.atlassian.net/wiki/spaces/OPS/pages/2716729438/Pozastaven+Kafka+uklada+ek
+
+Jaga = jedna
+Jaga-image = obrázky
+ytun = zbylých 5
+
+- Kontaktovat Purple + Martin Vosáhlo na Slacku před testováním (deploy, undeploy...)
+
+Scaling = škálování
+Gitlab -> CI/CD -> pipelines, lze také přes Portainer, jenom je to na víc kliků
+			- Volá docker-swarm příkazy pro deploy a undeploy
+	Run pipeline - zvolit master a nic nevyplňovat
+	nebo 
+	Master větev (musí být latest)
+
+		- vytvoří se úplně nová pipelina 
+			- Deploy, Replicas, Undeploy -> pro každý prostředí -stg, prd, dev
+
+
+Pokud při kliknutím na jakékoliv tlačítko bude stav "Failed" -> informovat Purple
+		- Muselo by dojít ke změně scriptu
+
+	Deploy-prd - "restart"
+		prd-deploy - shodí container ve swarmu, smaže soubory a okamžitě znovu vytvoří
+	
+	Replicas-prd "0 replicas = Pause"
+	 poznámka co jsou repliky - A replicated service is a Docker Swarm service that has a specified number of replicas running. These replicas consist of multiple instances of the specified Docker container. In our case, each replica will be a unique Redis instance
+			- https://www.cloudbees.com/blog/running-services-within-docker-swarm
+		- prd-zero-replicas
+			- shodí všechny repliky (zastaví, v portaineru už nebudou running)
+		- prd-default
+			- Nastaví repliky na default a spustí swarm
+
+	Undeploy-prd - "Delete"
+		- prd undeploy
+			- Komplet smaže container i z portaineru
