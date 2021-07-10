@@ -24,8 +24,10 @@ services:
       MYSQL_DATABASE: todos
 
   grafana:
-      image: grafana/grafana
-      ports: 4000:4000
+    image: grafana/grafana
+    ports: 
+     - 4000:4000
+    environment:
 
 volumes:
   todo-mysql-data:
