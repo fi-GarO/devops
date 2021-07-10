@@ -27,6 +27,8 @@ services:
     image: grafana/grafana
     ports: 
      - 3000:3000
-
+    environment:
+      GF_INSTALL_PLUGINS: percona-percona-app
+ 
 volumes:
   todo-mysql-data:
