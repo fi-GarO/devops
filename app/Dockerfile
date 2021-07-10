@@ -6,5 +6,5 @@ COPY . .
 CMD ["node", "src/index.js"]
 
 FROM grafana/grafana
-EXPOSE 1234
+EXPOSE 3000
 ADD grafana.ini /etc/grafana
