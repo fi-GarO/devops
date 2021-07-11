@@ -28,3 +28,13 @@ Docker get started - https://docs.docker.com/get-started/07_multi_container/
 		SHOW DATABASES;
 		Use todos;
 		select * from todo_items;
+
+
+
+Realisations:
+	- Grafana can easily swap port xxxx:3000 instead of fiddeling with grafana.ini
+	- Dockerfile not needed if using Docker-compose
+
+
+Rm all containers - docker rm -f $(docker ps -a -q)
+
