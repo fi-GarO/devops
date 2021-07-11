@@ -1,0 +1,30 @@
+Docker get started - https://docs.docker.com/get-started/07_multi_container/
+
+	https://hub.docker.com/r/grafana/grafana
+	docker run -d --name=grafana -p 4000:3000 grafana/grafana
+	admin - admin
+
+
+	grafana running 3000
+		- Needs to be XXXX:3000 port to work 
+	app 3000 - needs to change in /src/index.js
+		Resolved - Should be able to swap by grafana.ini and specifying http port + dockerfile / dockercompose yaml
+
+	Grafana Dockerfile 
+		FROM grafana/grafana
+		EXPOSE 3000
+		ADD grafana.ini /etc/grafana
+
+	Grafana can see mysql with host "mysql:3306" + login
+
+	SELECT
+  	name AS metric,
+  	completed
+	FROM todo_items
+	ORDER BY name
+
+	Mysql 
+		docker exec -it <mysql-container-id> mysql -u root -p
+		SHOW DATABASES;
+		Use todos;
+		select * from todo_items;

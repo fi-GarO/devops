@@ -1,0 +1,103 @@
+
+
+[Todo-Ideas]
+
+	- Run Grafana and Prometheus on Dell docker stack
+		
+		- Add any kind of monitoring (CPU of HP, Ping to seznam.cz from Hp, Ping to Dell, Create login form -> login numbers to the app?)
+
+	- Implement monitoring of Internet Speed - https://www.jeffgeerling.com/blog/2021/monitor-your-internet-raspberry-pi
+
+
+[Done]
+LinuxHP
+	- Check important files on HP and store them somewhere
+	- Install Linux dist
+	- Partition size change 
+		[partitions]
+		743785 sda2
+		693785 sda2
+	- ...
+	- ??
+	- Profit - done
+
+PC access	
+	- Ping in local network 
+		- Router changes fucks up o2 connection, dont switch on router
+		 - can ping ubuntu, cant ping windows -> firewall trouble. Ping allowed on Dell -> https://kb.iu.edu/d/aopy
+		
+	- Run docker on HP Access it on Dell - yep, this works -> Hostip:port
+			- Need to build it from Dockerfile then run it - Docker-compose up
+
+	- Openssh-server on HP -> Connect from Dell
+
+	- Reset root passwd for wsl - https://askubuntu.com/questions/931940/unable-to-change-the-root-password-in-windows-10-wsl
+
+	- Wakeup Dell2 on LAN / Remotely (problems with grub?)
+		- On LAN it shouldn't be problem
+		- Remotely needs working VPN on the same LAN	
+			also port set up port forwarding - https://putty.org.ru/articles/ssh-security-obscurity.html
+		- Firewall access on port 2323 through router
+		- Port forwarding inside the server (listens on port 2323, and trasnfers to 22, port 22 is by itself unusable)
+			Only allowing my dell1 public key on ssh
+			- https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server
+		- MAC - 28:16:AD:55:10:77
+		- Works - simple wake on lan app (windows) - port 7	
+			- https://www.cyberciti.biz/faq/configure-wireless-wake-on-lan-for-linux-wifi-wowlan-card/
+			- wakeonlan -i 10.0.1.50 -p 7 28:16:AD:55:10:77
+				- Port is probably useless, Ip is not static
+
+	https://chrisjrob.com/2011/04/05/dynamic-dns-and-remote-ssh-and-vnc/
+		- ipv6 
+			ssh -p 2323 garo@2a00:1028:83b0:805e:ea21:7380:ee9b:d688
+				- Nefunguje ssh ani ping na wsl2, lze přes klasický windows command prompt i z venkovní sítě	
+
+Git
+	- dostat celou app na git -> docker compose
+		- HP připojenej na Git
+		- SSH gen -> přidat public key do Githubu
+		- Změnit git origin (může být buďto https nebo ssh. Https chce login (nefungoval, nejspíš kvůli authentication), SSH musí mít přidanej pub. key do accountu)
+			- https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories
+			- git remote -v 
+				- Ukazuje nastavení originu
+	
+	- Download updates from git 
+		git remote add upstream git://github.com/fi-GarO/Devops
+			- setups remote upstream
+
+		git fetch upstream master
+		git merge upstream/master
+		or 
+		git pull upstream master
+
+	- Smazat nechtěný fily přes git add .
+		- command: git reset
+
+
+Docker
+	- Docker app running on specific ip adress different from host
+		- SSH also works on this IP no matter what Network its connected to
+		docker-compose:
+			app:
+			   ports:
+			      - "10.0.1.23:3000:3000"
+
+		- Somehow doesnt work on Dell2
+
+	- Compose up and Down scripts in /home/garo
+
+Wifi Trouble
+
+	- Wifi keeps disconnecting -> Potential wifi extender trouble
+		- Fixed potential power issues 
+		- Crone job to run a script that pings router every minute and if there is no answer, it resets Service network-manager as a root
+			
+			Crontab -e
+			* * * * * /home/garo/Desktop/resteNetManager.sh 
+					- Runs script every minute
+
+			resteNetManager.sh
+
+		- Yeah, dont do this. It worked but fried wifi chip after a while
+				
+				- The script is executed as bash script from Cron -> "Service" has to be declared by full path
