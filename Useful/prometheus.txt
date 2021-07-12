@@ -1,0 +1,22 @@
+
+	criticall -> existuje controla, severita má 4 stavy
+	rules -> apinotifiactionrouter.json
+		- změna
+		- python run.py
+		- Změní se v apinotifiactionrouter.rules.yml
+
+	priority - je pro Opsgenie
+	
+
+	runbook path = je jablotron.atlassian.net/wiki/space/alerts/pages/xxxxxxxxxxx/asadasdasd - xxxxxx = číslo
+			- yaml zkompiluje
+
+
+	virtualní environment pythonu -> pipenv
+	pipenv install -> doinstaluje všechno co potřebuje z Pipfile
+	Readme.md
+	
+	alarmanager -> připojený na promethea
+	
+	prometheus -> grafana = grafy 
+	prometheus -> opsgenie = alerty	
