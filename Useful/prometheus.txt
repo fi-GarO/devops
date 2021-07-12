@@ -1,12 +1,15 @@
 
-	criticall -> existuje controla, severita má 4 stavy
-	rules -> apinotifiactionrouter.json
+	criticall -> existuje controla, severita má 4 stavy a nelze vybrat jiný (bude upozorněno)
+
+	Změny v:
+	generator -> config -> rules -> apinotifiactionrouter.json
 		- změna
 		- python run.py
 		- Změní se v apinotifiactionrouter.rules.yml
 
+		- push do branche
+
 	priority - je pro Opsgenie
-	
 
 	runbook path = je jablotron.atlassian.net/wiki/space/alerts/pages/xxxxxxxxxxx/asadasdasd - xxxxxx = číslo
 			- yaml zkompiluje
