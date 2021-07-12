@@ -22,6 +22,7 @@ LinuxHP
 	- Profit - done
 
 PC access	
+	- Suspend - systemctl suspend
 	- Ping in local network 
 		- Router changes fucks up o2 connection, dont switch on router
 		 - can ping ubuntu, cant ping windows -> firewall trouble. Ping allowed on Dell -> https://kb.iu.edu/d/aopy
@@ -46,11 +47,22 @@ PC access
 			- https://www.cyberciti.biz/faq/configure-wireless-wake-on-lan-for-linux-wifi-wowlan-card/
 			- wakeonlan -i 10.0.1.50 -p 7 28:16:AD:55:10:77
 				- Port is probably useless, Ip is not static
-
 	https://chrisjrob.com/2011/04/05/dynamic-dns-and-remote-ssh-and-vnc/
 		- ipv6 
 			ssh -p 2323 garo@2a00:1028:83b0:805e:ea21:7380:ee9b:d688
-				- Nefunguje ssh ani ping na wsl2, lze přes klasický windows command prompt i z venkovní sítě	
+					 2a00:1028:83b0:805e:d86a:150d:7c58:b90
+					 2a00:1028:83b0:805e:2b58:bcbc:819b:3c36
+				- Nefunguje ssh ani ping na wsl2, lze přes klasický windows command prompt i z venkovní sítě
+		- test ssh from outside without setting up firewall rules on router
+			-> if that doesnt work = we can forward port 7 or 9 for WOL signals from outside
+
+		- Dell2 set to static - check if it changes	
+			- Nope doesnt change
+			- it probably also changes after a inactive while suspended
+	
+			- Probably giving this up -> IPv4 can be set on static for a device, but not router. Ipv6 cant be static.
+				- Virtualisation is much easier way
+			
 
 Git
 	- dostat celou app na git -> docker compose
