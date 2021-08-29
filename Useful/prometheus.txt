@@ -4,8 +4,11 @@
 	Změny v:
 	generator -> config -> rules -> apinotifiactionrouter.json
 		- změna
+		- pipenv shell - V případě, že není nainstalováno -> pipenv install 
+		- cd config.prometheus/generator
 		- python run.py
-		- Změní se v apinotifiactionrouter.rules.yml
+		- Změní se v apinotifiactionrouter.rules.yml - vytvoří alerty
+		- Kontrola pro každý Environment v config.prometheus/generator/rules/prd, stg, dev
 
 		- push do branche
 
@@ -19,7 +22,42 @@
 	pipenv install -> doinstaluje všechno co potřebuje z Pipfile
 	Readme.md
 	
-	alarmanager -> připojený na promethea
+	alertmanager -> připojený na promethea
 	
 	prometheus -> grafana = grafy 
 	prometheus -> opsgenie = alerty	
+
+	for = pokud trvá alert > x min tak je firing
+		jinak pending
+	Když for není tak je statický = skáče při každém výskytu
+		= null
+
+
+
+	cd desktop/configure-prometheus -> pipenv shell -> pipenv install (dependencies z pipfile)
+	provést změnu v .jsonu	
+	python3 run.py -> provede změny všude v projektu
+
+	check v rules pro každý env jestli sedí limity a změny
+	
+	(git checkout -b feature/OPS-2588 -> Vytvoří novou branch)
+	git add .
+	git commit -m "changed NodeExporter-NodeAvailableDisk-InfraBackup"
+	git push origin feature/OPS-XXXX
+
+	kliknout na push odkaz -> merge request
+	Vyplnit Asignee, reviewer
+	Merge options odškrtnout obě
+
+	Smazat svoji local větev a pullnout si znovu mastera
+	
+	Merge dává Andrej
+
+	Pipelines - test dev prd stg
+	Merge - až se dokončí zbytek tak pak bude deploy
+	Lze commit, push zkrz VS
+
+
+	git clone git@gitlab.jablotron.cloud:jablotron_ops/config.prometheus.git
+	
+	

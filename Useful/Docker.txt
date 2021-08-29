@@ -72,6 +72,8 @@ Git
 			- https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories
 			- git remote -v 
 				- Ukazuje nastavení originu
+			git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+			git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 	
 	- Download updates from git 
 		git remote add upstream git://github.com/fi-GarO/Devops
@@ -111,5 +113,16 @@ Wifi Trouble
 			resteNetManager.sh
 
 		- Yeah, dont do this. It worked but fried wifi chip after a while
+
+Python install debian
+	-https://linuxhint.com/install-python-debian-10/
+
 				
 				- The script is executed as bash script from Cron -> "Service" has to be declared by full path
+
+
+SSH-agent - remembers passphrase to pub key
+	- fixed - SSH-agent running (ps aux | grep ssh) but when trying to add a key -> returns -> Could not open a connection to your authentication agent.
+
+$ ssh-agent /bin/sh
+$ ssh-add ~/.ssh/id_ed25519

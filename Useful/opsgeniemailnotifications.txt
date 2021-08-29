@@ -1,0 +1,63 @@
+
+
+
+
+	
+	Otestovat nexmo smpp incident - nexmo-inci@jablotroncloudservices.eu.opsgenie.net
+			- komponenty SMS API - Outbound/Inbound SMS a SMPP 
+	Otestovat nexmo smpp maintenance - nexmo-maintenance@jablotroncloudservices.eu.opsgenie.net
+			- komponenty SMS API - Outbound/Inbound SMS a SMPP 
+	
+	Nastavit pravidlo na redirect -> na jaký e-maily chodí notifikace z Nexma - ops@jablotron.cz
+											- jcs.devops@jablotron.cz
+											- jcs.support@jablotron.cz
+											- Martin Vosáhlo
+											- Jiří Zárybnický
+
+						- Řešení: Cokoliv co propadne do jcs.support@jablotron.cz z e-mailu support@nexmo.com se pošle do Opsgenie pravidla 1 a 2
+
+				      -> Na jaký e-maily chodí notifikace z Pan-net.soc.m2m (T-Mobile) - tmsp.maintenance@t-mobile.cz ??
+	
+
+	Vytvořit pravidlo Inci i pro Maintenance pro T-mobile - přidat e-mail na opsgenie - dráboš
+
+	inci - t-mobile-inci@jablotroncloudservices.eu.opsgenie.net
+	     - Subject contains - M2M Service Platform 3.0 (TMSP)
+	     - Message contains - Initial-Notification for Incident-ID
+ 
+	Maintenance - t-mobile-maintenance@jablotroncloudservices.eu.opsgenie.net
+	Description contains - M2M SERVICE PLATTFORM 3.0 (TMSP) 
+	Description contains - API: ist betroffen | is affected
+
+
+
+
+	outlook pravidla - local nebo global?
+		- otestovat poslání mailu když můj outlook je offline
+
+
+
+	Aktuálně - Nastaveno cokoliv co příjde na e-mail jiri.turyna@jablotron.cz z support@nexmo.com -> forwarduje se na Opsgenie pravidlo nexmo1 a nexmo2
+										  z Pan-net.soc.m2m@pan-net.eu -> forwarduje se na Opsgenie pravidlo na tm1 a tm2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
