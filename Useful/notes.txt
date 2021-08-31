@@ -1,0 +1,40 @@
+Metriky v prometheu je potřeba napárovat na zadání -
+cloud_v1_component_item{component="TemperatureControlRequest"}
+
+vypisuje:
+cloud_v1_component_item{component="TemperatureControlRequest",instance="elk-prd3.local.jablotron.cloud",job="sql-exporter",metric="15-30m",task="monitoring_prd_exporters_sql-exporter.1"}	
+cloud_v1_component_item{component="TemperatureControlRequest",instance="elk-prd3.local.jablotron.cloud",job="sql-exporter",metric="<15m",task="monitoring_prd_exporters_sql-exporter.1"}	
+cloud_v1_component_item{component="TemperatureControlRequest",instance="elk-prd3.local.jablotron.cloud",job="sql-exporter",metric=">30m",task="monitoring_prd_exporters_sql-exporter.1"}	
+cloud_v1_component_item{component="TemperatureControlRequest",instance="elk-prd3.local.jablotron.cloud",job="sql-exporter",metric="Total",task="monitoring_prd_exporters_sql-exporter.1"}
+
+A) zadání - pokud je čas nezpracovaného procesu > 15min → warning
+
+template Metrica je cloud_v1_component_item s Labelem {"component":"TemperatureControlRequest"}
+operator > je proto, že v zadání je náhodou tak vždy porovnáváno
+
+v samotném .jsonu je potřeba v expr: definovat "labels":{"metric":"15-30m"}, ze které se budou data číst a vybrat jedno z metrik v prometheovi, které odpovídá datům vhodných pro zadání
+Následně zvolit limit, který je v tomto případě 1 (jeden chybný proces po dobu větší než 15 min)
+
+
+B) zadání - pokud je hodnota celkového počtu nezpracovaných > 100 → informational
+
+template Metrica je stejná jako v A)
+v samotném .json je potřeba v expr: definovat "labels"{"metric":"Total"} a samotný limit nastavit na 100 (podle zadání -> hodnota celkového počtu je > 100 - operátor je definovaný v template)
+
+Následně je potřeba upravit description v templatě:
+"description": "Number of requests in range {{{{ $labels.metric }}}} is larger than {} (current value is: {{{{ $value }}}})"
+Double currly braces je Python featura
+{{{ $labels.metric }}}} - nahradí labelem odpovídající metriky
+
+is larger than {} - vytvořena dedičnost v prometheus -> other.py - Vezme Limit u metriky a doplního ho Descriptionu (popsáno v shared.py)
+		class AlertTemperatureControlRequest(AlertDescriptionLimit, AlertBase):
+    		pass
+
+{{{{ $value }}}} - vrací konkrétní hodnotu v čas kdy příjde alert
+
+
+Zároveň je potřeba kontrolovat název alertu v *.rules.yml, aby nebyli dva stejně pojmenované alerty (lze definovat parametrem "name")
+
+
+
+btw lze normálně pouštět run.py podle potřeby a debuggování. Maximálně hodí error.
