@@ -60,4 +60,8 @@
 
 	git clone git@gitlab.jablotron.cloud:jablotron_ops/config.prometheus.git
 	
+	Před pushováním a vytvářením merge requestu je potřeba mít aktuální master branch
+	git checkout master -> skočí do Masteru nebo do jiné větve (pokud neexistuje, vytvoří)
+	git merge feature/OPS-2749 - spojí aktuální větev s feature/OPS-2749 (ve VS by mělo být aktuálně nastaveno, že si bude pullovat věci pravidelně sám)
+	git pull origin master -> vezme lokální master větev a nahradí ji aktuální master větví z gitu
 	
