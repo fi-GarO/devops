@@ -1,0 +1,71 @@
+
+
+MultiPump-ServiceUnavailable
+
+	PRD - nenasazeno (můžeme připravit a nastavit ignore)
+		- sum(docker_stats_is_up{container=~"timeseries_processor.*"}) < 3
+			- Critical
+			- tým: Support
+			- Ignore	
+		
+	STG - sum(docker_stats_is_up{container=~"timeseries_processor.*"}) < 3
+			- Aktuálně jsou v prometheu vidět tyto containery 2, mám limit nechat na 3 nebo nastavit na 2?
+			- Moderate
+			- Tým: Purple
+	DEV - nic
+
+
+MultiPump-KafkaTopicLag 
+
+	PRD - nenasazeno (můžeme přípravit a nastavit ignore)	
+		max(kafka_minion_group_topic_lag{group="app-multi-pump"}) > 10
+			- Critical
+			- Tým: Support - nad definicí environments
+			- ignore - nad definicí environments
+
+		max(kafka_minion_group_topic_lag{group="app-multi-pump"}) > 5
+			- Warning
+			- Tým: Support - nad definicí environments
+			- Ignore - nad definicí environments
+			
+	
+	STG - max(kafka_minion_group_topic_lag{group="app-multi-pump"}) > 10
+		- Moderate
+		- Tým: Purple
+
+	DEV - nic
+
+MultiPump-IncreaseErrorLogs
+			- Projít nastavení s Andrejem
+
+	PRD - nenasazeno (můžeme přípravit a nastavit ignore)
+		sum(increase(logback_events_total{level="error", job="multi-pump"}[2m])) > 10
+			- Critical
+			- Tým: Support
+			- ignore
+	
+	STG - sum(increase(logback_events_total{level="error", job="multi-pump"}[2m])) > 10
+		- Moderate
+		- Tým: Purple
+
+	DEV - nic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
