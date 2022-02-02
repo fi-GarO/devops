@@ -1,5 +1,5 @@
 curl -i -X GET \
-  -H 'Authorization:OAuth doplň-si-sem-APIkey-ze-SP' \
+  -H 'Authorization:OAuth **doplň-si-sem-APIkey-ze-SP**' \
   'https://api.statuspage.io/v1/pages/lp9fc6wp9l69/components/rq64j6m8t0ft/uptime'
 
 + page id - lp9fc6wp9l69
