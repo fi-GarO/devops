@@ -64,4 +64,14 @@
 	git checkout master -> skočí do Masteru nebo do jiné větve. 
 	git merge feature/OPS-2749 - spojí aktuální větev s feature/OPS-2749 (ve VS by mělo být aktuálně nastaveno, že si bude pullovat věci pravidelně sám)
 	git pull origin master -> vezme lokální master větev a nahradí ji aktuální master větví z gitu
+
+	V případě, že je po vytvoření merge requestu branche behind o několik commitů
+	1952  git checkout master
+ 	1953  git pull
+ 	1954  git checkout SUPP-237
+ 	1955  git checkout feature/SUPP-237
+ 	1956  git merge master
+	git push origin feature/SUPP-120
+
+	
 	
