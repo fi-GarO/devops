@@ -66,12 +66,18 @@
 	git pull origin master -> vezme lokální master větev a nahradí ji aktuální master větví z gitu
 
 	V případě, že je po vytvoření merge requestu branche behind o několik commitů
-	1952  git checkout master
- 	1953  git pull
- 	1954  git checkout SUPP-237
- 	1955  git checkout feature/SUPP-237
- 	1956  git merge master
-	git push origin feature/SUPP-120
+		1952  git checkout master
+ 		1953  git pull
+ 		1954  git checkout SUPP-237
+ 		1955  git checkout feature/SUPP-237
+ 		1956  git merge master
+		git push origin feature/SUPP-120
+
+	Nasazení na PRD
+		Potvrdit Merge request
+		V projektu ops.monitoring -> najít latest master větev -> Branch name = Master -> Spustit v pipelině -> deploy-core-prd -> zkontrolovat nasazení v prometheu	
+
+
 
 	
 	
