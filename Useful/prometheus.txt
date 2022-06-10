@@ -75,7 +75,7 @@
 
 	Nasazení na PRD
 		Potvrdit Merge request
-		V projektu ops.monitoring -> najít latest master větev (CI/CD -> Pipelines) -> Branch name = Master -> Spustit v pipelině -> deploy-core-prd -> zkontrolovat nasazení v prometheu	
+		V projektu ops.monitoring -> najít latest master větev (CI/CD -> Pipelines) -> Branch name = Master -> Spustit v pipelině -> deploy-core-prd (v případě produkce, jinak deploy-core-dev) -> zkontrolovat nasazení v prometheu	
 
 
 
