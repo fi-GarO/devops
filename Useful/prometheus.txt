@@ -1,5 +1,5 @@
 
-	criticall -> existuje controla, severita má 4 stavy a nelze vybrat jiný (bude upozorněno)
+	critical -> existuje controla, severita má 4 stavy a nelze vybrat jiný (bude upozorněno)
 
 	Změny v:
 	generator -> config -> rules -> apinotifiactionrouter.json
