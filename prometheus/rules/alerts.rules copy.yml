@@ -1,0 +1,40 @@
+- alert: HighCPUUsage
+  expr: avg(node_cpu{mode="idle"}) < 20
+  for: 5m
+  labels:
+    severity: warning
+  annotations:
+    summary: "High CPU usage on {{ $labels.instance }}"
+    description: "The average CPU usage on {{ $labels.instance }} has been above 80% for more than 5 minutes."
+- alert: HighMemoryUsage
+  expr: avg(node_memory_MemAvailable_bytes) / avg(node_memory_MemTotal_bytes) < 0.2
+  for: 5m
+  labels:
+    severity: warning
+  annotations:
+    summary: "High memory usage on {{ $labels.instance }}"
+    description: "The average memory usage on {{ $labels.instance }} has been above 80% for more than 5 minutes."
+- alert: HighRequestLatency
+  expr: histogram_quantile(0.99, sum(rate(http_request_duration_seconds_bucket{handler="api"}[5m])) by (le)) > 2
+  for: 5m
+  labels:
+    severity: critical
+  annotations:
+    summary: "High request latency on {{ $labels.instance }}"
+    description: "The average request latency on {{ $labels.instance }} has been above 2 seconds for more than 5 minutes."
+- alert: LowDiskSpace
+  expr: node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"} * 100 < 10
+  for: 5m
+  labels:
+    severity: warning
+  annotations:
+    summary: "Low disk space on {{ $labels.instance }}"
+    description: "The available disk space on {{ $labels.instance }} has fallen below 10% for more than 5 minutes."
+- alert: HighErrorRate
+  expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.05
+  for: 5m
+  labels:
+    severity: critical
+  annotations:
+    summary: "High error rate on {{ $labels.instance }}"
+    description: "The error rate on {{ $labels.instance }} has been above 5% for more than 5 minutes."

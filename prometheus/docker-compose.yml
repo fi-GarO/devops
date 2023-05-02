@@ -1,0 +1,30 @@
+version: '3'
+services:
+  my-app:
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - monitoring
+  prometheus:
+    image: prom/prometheus:v2.30.3
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./alert.rules.yml:/etc/prometheus/rules/alerts.rules.yml
+    networks:
+      - monitoring
+  alertmanager:
+    image: prom/alertmanager:v0.23.0
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/config.yml
+      - ./alertmanager_templates:/etc/alertmanager/templates
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge
