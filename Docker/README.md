@@ -31,7 +31,7 @@
 ## Run image on new instance
 - docker run -d -p 8080:8080 jirituryna/docker-products
 - docker run -d -p 8080:8080 -v test-db:/test.db jirituryna/docker-products
-docker run -d -p 8080:8080 -v test-db:/app/test.db jirituryna/docker-products
+- docker run -d -p 8080:8080 -v test-db:/app/test.db jirituryna/docker-products
 - docker run -d -p 8080:8080 --mount source=test-db,destination=/test.db jirituryna/docker-products
 
 
@@ -60,3 +60,15 @@ docker run -dp 8080:8080 \
 sudo apt install protobuf-compiler
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
+
+
+# Good to know
+docker run -t -d -p 8080:8080 python:3.7-alpine3.9
+
+docker exec -it e45b6d9bce2f /bin/sh
+
+docker cp chnmt_notify.py e45b6d9bce2f:chnmt-notify/chnmt_notify.py
+
+apk update && apk add bash
+
+docker exec -it e45b6d9bce2f /bin/bash
