@@ -7,7 +7,7 @@ route:
   receiver: 'slack'
 
 receivers:
-  - name: 'slack'
-    slack_configs:
-      - channel: '#alerts'
-        send_resolved: true
+- name: default-receiver
+  webhook_configs:
+  - url: 'http://localhost:9094/api/v1/alerts'
+

@@ -1,9 +1,35 @@
 version: '3'
 services:
-  my-app:
+  my-app1:
     build: .
     ports:
-      - "5000:5000"
+      - "5001:5000"
+    networks:
+      - monitoring
+  my-app2:
+    build: .
+    ports:
+      - "5002:5000"
+    networks:
+      - monitoring
+  my-app3:
+    build: .
+    ports:
+      - "5003:5000"
+    networks:
+      - monitoring
+
+  my-app4:
+    build: .
+    ports:
+      - "5004:5000"
+    networks:
+      - monitoring
+
+  my-app5:
+    build: .
+    ports:
+      - "5005:5000"
     networks:
       - monitoring
   prometheus:
@@ -12,9 +38,10 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-      - ./alert.rules.yml:/etc/prometheus/rules/alerts.rules.yml
+      - ./rules/alerts.rules.yml:/etc/prometheus/alerts.rules.yml
     networks:
       - monitoring
+
   alertmanager:
     image: prom/alertmanager:v0.23.0
     ports:
