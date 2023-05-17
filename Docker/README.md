@@ -61,7 +61,6 @@ sudo apt install protobuf-compiler
 export PATH=$PATH:$GOPATH/bin
 export GOPATH=$HOME/go
 
-
 # Good to know
 docker run -t -d -p 8080:8080 python:3.7-alpine3.9
 
@@ -72,3 +71,9 @@ docker cp chnmt_notify.py e45b6d9bce2f:chnmt-notify/chnmt_notify.py
 apk update && apk add bash
 
 docker exec -it e45b6d9bce2f /bin/bash
+
+
+# app.run(host='localhost', port=5000)
+- This runs the app only inside the container. Not accessible from main machine.	
+# app.run(host='0.0.0.0', port=5000)
+- This makes the app accessible from main machine.
