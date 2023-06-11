@@ -1,0 +1,90 @@
+Oba seznamy:
+
+Matematika:
+1. Derivace, diferenciál a integrál (definice, výpočty, praktický význam). (č. 2)
+2. Soustava lineárních rovnic a metody jejich řešení. (č. 3)
+3. Maticová algebra, typy matic, inverzní matice, determinant. (č. 5)
+4. Vlastní čísla a vlastní vektory matic. Způsob výpočtu a praktická interpretace (č. 6)
+5. Pojem pravděpodobnost, náhodný jev. Podmíněná pravděpodobnost, nezávislost. Náhodná (č. 7)
+veličina – diskrétní, spojitá a jejich použití. Střední hodnota, kvantily, rozptyl. 
+
+Signály, zpracování informace
+6. Signály a systémy. LTI systémy. Přenosová funkce, impulsní odezva. Konvoluce u číslicových (č. 24)
+signálů.
+7. Fourierovy řady. Diskrétní Fourierova transformace, její použití a interpretace. Spektrum (č. 25)
+signálu, FFT. Číslicové filtry FIR a IIR. Filtrace v čase nebo prostoru. 
+8. Vzorkování, kvantování. Vzorkovací teorém. Aliasing. Práce se zvukem na počítači. (č. 26)
+
+Algoritmy a programování 
+10. Programátorský model procesoru, instrukce, instrukční soubor, symbolická adresa, operace v
+registrech, s pamětí, I/O operace. Sekvence instrukcí, algoritmizace z (č. 13)
+15. Objektově orientované programování, význam a základní principy: zapouzdření, dědičnost a
+polymorfismus, správa přístupu. Abstraktní třídy a rozhraní. Genericita a její využití. (č. 17 - chybí)
+16. Tvorba aplikací v prostředí konzole a MS Windows. Vývojová prostředí. (č. 18 - chybí)
+
+Počítačové sítě a Internet 
+22. Základní principy činnosti protokolů sítě Internet – IP, TCP, UDP. Domain Name System, jeho
+role a činnost, DNS servery, postup řešení dotazu, reverzní DNS. (č. 21)
+
+Databázové systémy
+27. Konceptuální návrh relačních databází, základní konstrukty, ER diagram, kardinalita, parcialita,
+závislost. (č. 32)
+28. Normalizace, normální formy, funkční závislosti, aktualizační anomálie. (č. 33)
+29. Relační model, základní konstrukty, realizace vztahů v relačním modelu, integritní omezení. (č. 34)
+30. CRUD operace, SQL DDL, SQL DML, SQL dotazy - selekce, projekce, agregační funkce,
+množinové operace, typy spojení, vnořené dotazy. (č. 35)
+31. Spouště a uložené procedury. (č. 36)
+32. Pohledy, přístupová práva, transakce - princip, vlastnosti. (č. 37)
+33. Indexování a optimalizace dotazů. (č. 38)
+
+
+Hardware a elektronika
+34. Kombinační logické obvody (jejich charakteristika, možnosti realizace pomocí logických
+hradel, multiplexorů a dekodérů. (č. 21)
+35. Sekvenční obvody (základní vlastnosti a typy klopných obvodů, registry, posuvné registry,
+čítače, návrh automatů typu Mealy a Moore). (č. 28)
+36. Aritmetické obvody (výpočet aritmetických operací pomocí číslicových obvodů). (č. 29)
+37. Procesory, FPGA obvody (realizace automatů pomocí procesorů a FPGA) (č. 30)
+
+
+
+Částečně:
+9. Číselné soustavy a převody mezi nimi. Způsoby kódování čísel s pevnou a s pohyblivou
+řádovou tečkou. Kódování záporných čísel. (č. 12)
+11. Jazyk C: základní datové typy a strukturovaný datový typ. Pole a ukazatele, dynamická alokace
+paměti.  (č. 14)
+
+12. Algoritmy pro vyhledávání a řazení, složitost algoritmů. (č. 14)
+
+13. Rekurze a její použití. Rekurzivní a nerekurzivní realizace vybraných algoritmů. Využití
+zásobníku programu. (č. 16) 
+
+14. Členění programu v jazyce vyšší úrovně. Metody, funkce, procedury, makra. Parametry metod,
+procedur a funkcí a způsoby jejich předávání. Globální a lokální proměnné. (č. 16 - chybí) 
+
+17. Programátorské rozhraní operačního systému. Pokročilejší programátorské techniky jako
+zpracování zpráv, programování vláken, synchronizace procesů. (č. 18 - chybí)
+
+18. Operační systém, vysvětlení pojmu, typy, poskytované funkce. (č. 19)
+
+19. Správa procesů v operačním systému, vztah programu a procesu, životní cyklus procesu. (č. 19)
+
+20. Principy vrstvené architektury počítačových sítí, referenční model OSI. Charakteristika
+lokálních počítačových sítí. (č. 20)
+
+
+21. Technologie Ethernet, její principy a vývoj, algoritmus CSMA/CD. Bezdrátové lokální sítě
+standardu IEEE 802.11. (č. 20)
+
+23. Základní principy WWW, HTTP, HTML. Jazyk (X)HTML, jeho charakteristika, možnosti a
+omezení. (č. 22)
+
+
+24. CSS – vlastnosti, hodnoty, dědění, kaskádování. Blokový model CSS. (č. 22)
+
+25. Webové aplikace – charakteristika programování na straně serveru a klienta. Základy jazyka
+JavaScript. DOM a přístup k prvkům stránky. (č. 23)
+
+26. Jazyk PHP. Problematika uchovávání stavových informací, cookies. (č. 23)
+
+

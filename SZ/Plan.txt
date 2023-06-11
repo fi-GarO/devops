@@ -1,0 +1,99 @@
+Zde je plán, jak se naučit každé téma během 20 dní:
+
+Den 1: Derivace, diferenciál a integrál
+
+Přečti si o základních definicích derivace, diferenciálu a integrálu.
+Procvičuj výpočet derivací a integrálů různých funkcí.
+Porozuměj praktickému významu derivací a integrálů.
+Den 2: Soustava lineárních rovnic a metody řešení
+
+Seznam se základními pojmy soustavy lineárních rovnic.
+Nauč se metody řešení soustav lineárních rovnic, jako je Gaussova eliminace a Cramerovo pravidlo.
+Procvičuj řešení soustav lineárních rovnic pomocí různých metod.
+Den 3: Maticová algebra, typy matic, inverzní matice, determinant
+
+Pochop základní pojmy maticové algebry, včetně operací s maticemi.
+Nauč se výpočtu inverzní matice a determinantu.
+Procvičuj různé typy matic a jejich vlastnosti.
+Den 4: Vlastní čísla a vlastní vektory matic
+
+Seznam se základními pojmy vlastních čísel a vektorů.
+Nauč se výpočtu vlastních čísel a vlastních vektorů.
+Porozuměj praktické interpretaci vlastních čísel a vektorů.
+Den 5: Pravděpodobnost, náhodný jev, náhodné veličiny
+
+Přečti si o základních pojmech pravděpodobnosti, náhodných jevech a náhodných veličinách.
+Nauč se výpočtu pravděpodobnosti, podmíněné pravděpodobnosti, nezávislosti a střední hodnoty.
+Porozuměj rozdělením náhodných veličin a významu kvantilů a rozptylu.
+Den 6: Signály a systémy, Fourierovy řady
+
+Seznam se základními pojmy signálů a systémů.
+Nauč se o Fourierových řadách a jejich významu v analýze signálů.
+Porozuměj diskrétní Fourierově transformaci a jejímu použití v zpracování signálů.
+Den 7: Vzorkování, kvantování, číslicové filtry
+
+Pochop principy vzorkování a kvantování signálů.
+Nauč se o aliasingu a práci se zvukem na počítači.
+Seznam se základy číslicových filtrů FIR a IIR a jejich použití.
+Den 8: Číselné soustavy a kódování
+
+Procvičuj převody mezi různými číselnými soustavami.
+Nauč se způsoby kódování čísel s pevnou a pohyblivou řádovou tečkou.
+Porozuměj kódování záporných čísel.
+Den 9: Programátorský model procesoru, jazyk C
+
+Seznam se základními pojmy programátorského modelu procesoru.
+Nauč se základy jazyka C, včetně datových typů, struktur, polí a ukazatelů.
+Procvičuj tvorbu algoritmů v jazyce C a práci s pamětí.
+Den 10: Algoritmy pro vyhledávání a řazení, rekurze
+
+Přečti si o algoritmech pro vyhledávání a řazení.
+Procvičuj různé algoritmy, jako je binární vyhledávání a Quicksort.
+Seznam se s rekurzí a jejím použitím v algoritmech.
+Den 11: Členění programu, objektově orientované programování
+
+Nauč se členit programy na metody, funkce, procedury a makra.
+Porozuměj způsobům předávání parametrů a práci s globálními a lokálními proměnnými.
+Seznam se základy objektově orientovaného programování a jeho principy.
+Den 12: Tvorba aplikací v prostředí, programátorské rozhraní
+
+Seznam se prostředím pro tvorbu aplikací, například konzolového nebo prostředí MS Windows.
+Nauč se vývojovým prostředím a nástrojům, které usnadňují tvorbu aplikací.
+Porozuměj programátorskému rozhraní operačního systému a pokročilým technikám programování.
+Den 13: Operační systém, správa procesů
+
+Přečti si o operačním systému, jeho typech a poskytovaných funkcích.
+Nauč se správě procesů v operačním systému a vztahu mezi programem a procesem.
+Porozuměj životnímu cyklu procesu v operačním systému.
+Den 14: Principy počítačových sítí, lokální sítě
+
+Seznam se principy vrstvené architektury počítačových sítí a referenčního modelu OSI.
+Nauč se charakteristikám lokálních počítačových sítí.
+Porozuměj technologii Ethernet a bezdrátovým lokálním sítím standardu IEEE 802.11.
+Den 15: Základy protokolů sítě Internet, DNS
+
+Pochop základní principy protokolů sítě Internet, jako je IP, TCP a UDP.
+Seznam se systémem DNS a jeho činností, včetně řešení dotazů a reverzního DNS.
+Den 16: Základy WWW, HTML, CSS
+
+Nauč se základní principy WWW, protokolu HTTP a jazyka HTML.
+Seznam se strukturováním webových stránek pomocí (X)HTML a využitím CSS pro stylování.
+Procvičuj práci s blokovým modelem CSS.
+Den 17: Webové aplikace, JavaScript, DOM
+
+Přečti si o programování webových aplikací na straně serveru a klienta.
+Nauč se základy jazyka JavaScript a práci s DOM pro přístup k prvkům stránky.
+Den 18: Jazyk PHP, uchovávání stavových informací
+
+Seznam se jazykem PHP a jeho možnostmi v tvorbě webových aplikací.
+Procvičuj práci s uchováváním stavových informací pomocí cookies.
+Den 19: Konceptuální návrh relačních databází, normalizace
+
+Pochop principy konceptuálního návrhu relačních databází a ER diagramů.
+Seznam se normalizací a normálními formami.
+Procvičuj tvorbu ER diagramů a normalizaci databází.
+Den 20: Relační model, SQL, transakce
+
+Nauč se základy relačního modelu a způsoby realizace vztahů v databázi.
+Procvičuj CRUD operace a práci s jazykem SQL pro dotazy, vkládání, aktualizaci a mazání dat.
+Porozuměj pohledům, přístupovým právům a transakcím v databázových systémech.

@@ -1,0 +1,13 @@
+Derivace
+Definice: Derivace je matematická operace, která nám umožňuje zjistit, jak rychle se mění funkce v závislosti na změně jejího vstupního argumentu. Derivace je také interpretována jako směrnice tečny k funkčnímu grafu v daném bodě.
+
+Definici derivace lze zapsat pomocí limitního procesu. Pokud máme danou funkci f(x), potom derivace funkce f v bodě x se značí f'(x) nebo df/dx a je definována následovně:
+
+f'(x) = lim(h→0) [f(x + h) - f(x)] / h,
+
+Derivace konstanty c = 0:
+f'(c) = lim(h→0) [f(c + h) - f(c)] / h
+f'(c) = lim(h→0) [f(c + 0) - f(c)] / 0
+f'(c) = lim(h→0) [f(c) - f(c)] / 0
+f'(c) = 0/0 nedefinováno
+Výsledek je "nedefinováno", což znamená, že derivace v tomto případě neexistuje. Tento výsledek je specifický pro případ derivace konstantní funkce, kde derivace je vždy rovna nule.

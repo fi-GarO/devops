@@ -1,0 +1,37 @@
+x + 2y = 5 
+->
+x=0 -> y= 5/2 = 2,5 -> (0, 2,5)
+x=1 -> y = 2 -> (1, 2)
+x=2 -> y = 3/2 -> (2, 1,5)
+x=3 -> y = 4 -> (3, 1)
+
+4x + y = 6
+x = 0, y = 6
+x = 1, y = 2
+x = 2, y = -2
+x = 3, y = -6
+
+
+
+
+
+
+
+Determinant
+
+A = [[2, 1, 1],
+[4, 1, 0],
+[-2, 2, 1]]
+
+To calculate the determinant of a 3x3 matrix, we can use the formula:
+
+det(A) = (a11 * a22 * a33) + (a12 * a23 * a31) + (a13 * a21 * a32)
+- (a31 * a22 * a13) - (a32 * a23 * a11) - (a33 * a21 * a12)
+
+Let's substitute the values from matrix A into the formula:
+
+det(A) = (2 * 1 * 1) + (1 * 0 * -2) + (1 * 4 * 2)
+- (-2 * 1 * 1) - (2 * 0 * 2) - (1 * 4 * 1)
+= 2 + 0 + 8 - (-2) - 0 - 4
+= 2 + 8 + 2 - 4
+= 8
