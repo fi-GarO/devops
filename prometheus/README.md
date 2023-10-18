@@ -12,3 +12,8 @@ docker rm $(docker ps -a -q)
 
 # remove container by name
 docker rm $(docker ps -a -q --filter "name=alertmanager")
+
+
+
+http://localhost:9093/api/v2/alerts
+curl http://localhost:9093/api/v2/alerts
