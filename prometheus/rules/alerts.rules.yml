@@ -5,7 +5,7 @@ groups:
     expr: absent(my_metric{instance="my-app1:5000"})
     for: 1m
     labels:
-      severity: warning
+      severity: critical
     annotations:
       summary: "MyApp1 metric has been absent for the last 1 minute"
       description: "There have been no data for MyApp1 for the last 1 minute. This may indicate a problem with the application or data collection."
@@ -15,7 +15,7 @@ groups:
     expr: absent(my_metric{instance="my-app2:5000"})
     for: 1m
     labels:
-      severity: warning
+      severity: critical
     annotations:
       summary: "MyApp2 metric has been absent for the last 1 minute"
       description: "There have been no data for MyApp2 for the last 1 minute. This may indicate a problem with the application or data collection."

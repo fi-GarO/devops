@@ -23,6 +23,9 @@ docker build -t my-app .
 docker run -p 5000:5000 my-app 
 
 
+# Webhook site for testing
+https://webhook.site/
+
 
 http://localhost:9093/api/v2/alerts
 curl http://localhost:9093/api/v2/alerts

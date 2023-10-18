@@ -77,3 +77,7 @@ docker exec -it e45b6d9bce2f /bin/bash
 - This runs the app only inside the container. Not accessible from main machine.	
 # app.run(host='0.0.0.0', port=5000)
 - This makes the app accessible from main machine.
+
+
+# follow logs
+docker logs --follow a2880223db1a
