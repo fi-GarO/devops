@@ -17,4 +17,3 @@ EXPOSE 5000
 
 # Set the command to start the Flask app
 CMD [ "python", "app.py" ]
-

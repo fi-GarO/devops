@@ -1,33 +1,33 @@
 version: '3'
 services:
   my-app1:
-    build: .
+    image: my-app:latest
     ports:
       - "5001:5000"
     networks:
       - monitoring
   my-app2:
-    build: .
+    image: my-app:latest
     ports:
       - "5002:5000"
     networks:
       - monitoring
   my-app3:
-    build: .
+    image: my-app:latest
     ports:
       - "5003:5000"
     networks:
       - monitoring
 
   my-app4:
-    build: .
+    image: my-app:latest
     ports:
       - "5004:5000"
     networks:
       - monitoring
 
   my-app5:
-    build: .
+    image: my-app:latest
     ports:
       - "5005:5000"
     networks:
