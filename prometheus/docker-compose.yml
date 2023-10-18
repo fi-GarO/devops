@@ -18,14 +18,12 @@ services:
       - "5003:5000"
     networks:
       - monitoring
-
   my-app4:
     image: my-app:latest
     ports:
       - "5004:5000"
     networks:
       - monitoring
-
   my-app5:
     image: my-app:latest
     ports:
