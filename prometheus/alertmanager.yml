@@ -6,8 +6,10 @@ route:
   receiver: 'hooksite'
 
 inhibit_rules:
-  - source_matchers: [alertname: "MyApp5-Absent"]
-    target_matchers: [severity: "warning"]
+  - source_match:
+      alertname: "MyApp5-Absent"
+    target_matchers:
+      - alertname != "MyApp5-Absent"
     
 receivers:
   - name: 'hooksite'
