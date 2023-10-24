@@ -14,4 +14,4 @@ inhibit_rules:
 receivers:
   - name: 'hooksite'
     webhook_configs:
-      - url: 'https://webhook.site/41783e71-1097-439d-95bb-c2601e508147'
+      - url: 'https://webhook.site/1a127120-1b58-4ed0-b7a9-ec7851fd32b6'
