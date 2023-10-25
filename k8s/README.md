@@ -17,3 +17,6 @@ kubectl delete deployment <deployment-name>
 
 # delete service
 kubectl delete service <service-name>
+
+# describe pod 
+kubectl describe pod <pod-name>
