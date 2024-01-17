@@ -6,6 +6,8 @@ services:
       - "5001:5000"
     networks:
       - monitoring
+    labels:
+      job: monitoring_postgres_prd
   my-app2:
     image: my-app:latest
     ports:

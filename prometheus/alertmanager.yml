@@ -6,12 +6,15 @@ route:
   receiver: 'hooksite'
 
 inhibit_rules:
-  - source_match:
-      alertname: "MyApp5-Absent"
+  - source_matchers:
+      - alertname = "MyApp5-Absent"
+      - instance = "10.10.11"
     target_matchers:
-      - alertname != "MyApp5-Absent"
+      - alertname = "MyApp5-Absent"
+      - job =~ "monitoring_postgres_prd|bull-libjobs|kafka-dlq-exporter"
     
 receivers:
   - name: 'hooksite'
     webhook_configs:
-      - url: 'https://webhook.site/1a127120-1b58-4ed0-b7a9-ec7851fd32b6'
+      - url: 'https://webhook.site/4392e784-9e26-49fe-b709-52b9582380e6'
+

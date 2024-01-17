@@ -1,0 +1,4 @@
+
+Přidat instance label
+PRD-JagaEvents-KafkaTopicPartitionHightWaterMark-Critical (critical)
+PRD-YtunEvents-KafkaTopicPartitionHightWaterMark-Critical (critical)

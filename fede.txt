@@ -1,0 +1,28 @@
+Federate target 10.135.222.204:9290 is down = ELK-PRD1
+13.10 - 8:40
+https://jacloudservices.slack.com/archives/CBY1ZSDRR/p1697179202808459
+
+
+
+
+PRD-Redis-RedisCompletedJobs-SmsConnector-Critical (critical) = monitoring_prd_exporters_bull-libjobs
+PRD-Postgres-PostgresDeadlock-Critical (critical)
+PRD-JagaEvents-KafkaTopicPartitionHightWaterMark-Critical (critical)
+PRD-YtunEvents-KafkaTopicPartitionHightWaterMark-Critical (critical)
+PRD-ApiDeviceCode-HttpRequestsErrorCount-Critical (critical)
+PRD-Logbook-KafkaTopicPartitionMessageCount-EnrichedCarGPSData-Critical (critical)
+PRD-CloudV1-ClientDuration-Critical (apiTotal critical) = prometheus_statistics
+
+
+
+
+elk-prd = federace1
+- 
+
+
+Alone - 10.135.222.204:9290
+https://jacloudservices.slack.com/archives/CBY1ZSDRR/p1695730772319619
+
+
+
+- absenty prostě inhibitovat nejdou. Nemají labely a nejdou filtrovat - jediný co by byla potřeba změna absent alertů https://niravshah2705.medium.com/prometheus-alert-for-missing-metrics-and-labels-afd4b8f12b1
